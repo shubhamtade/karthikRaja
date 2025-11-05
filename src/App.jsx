@@ -7,18 +7,18 @@ import {
 } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import "./britive-theme.css";
-import Navigation from "./Components/Navigation.jsx";
-import HomePage from "./Pages/HomePage.jsx";
-import ContactUs from "./Pages/ContactUs.jsx";
-import AboutUsPage from "./Pages/AboutUsPage.jsx";
-import WhyRudraticPage from "./Pages/WhyRudraticPage.jsx";
-import SolutionsPage from "./Pages/SolutionsPage.jsx";
-import ClientSuccessPage from "./Pages/ClientSuccessPage.jsx";
+import Navigation from "./Components/Navigation";
+import HomePage from "./Pages/HomePage";
+import ContactUs from "./Pages/ContactUs";
+import AboutUsPage from "./Pages/AboutUsPage";
+import WhyRudraticPage from "./Pages/WhyRudraticPage";
+import SolutionsPage from "./Pages/SolutionsPage";
+import ClientSuccessPage from "./Pages/ClientSuccessPage";
 import ClientLoginModal from "./Components/ClientLoginModal";
-import PAMPage from "./Pages/PAMPage.jsx";
-import ITMonitoringPage from "./Pages/ITMonitoringPage.jsx";
-import BPMPage from "./Pages/BPMPage.jsx";
-import AutomationPage from "./Pages/AutomationPage.jsx";
+import PAMPage from "./Pages/PAMPage";
+import ITMonitoringPage from "./Pages/ITMonitoringPage";
+import BPMPage from "./Pages/BPMPage";
+import AutomationPage from "./Pages/AutomationPage";
 
 // Page transition variants
 const pageVariants = {
