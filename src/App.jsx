@@ -11,7 +11,7 @@ import Navigation from "./Components/Navigation.jsx";
 import HomePage from "./Pages/HomePage.jsx";
 import ContactUs from "./Pages/ContactUs.jsx";
 import AboutUsPage from "./Pages/AboutUsPage.jsx";
-import WhyRudraticPage from "./Pages/WhyRudraticPage.jsx";
+import WhyRudraticPage from "./Pages/WhyRudraticpage.jsx";
 import SolutionsPage from "./Pages/SolutionsPage.jsx";
 import ClientSuccessPage from "./Pages/ClientSuccessPage.jsx";
 import ClientLoginModal from "./Components/ClientLoginModal";
