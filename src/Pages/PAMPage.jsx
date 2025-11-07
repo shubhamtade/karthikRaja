@@ -1,157 +1,157 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Shield, CheckCircle2, Lock, Eye, Settings, Users } from "lucide-react";
+import {
+  Shield,
+  Cpu,
+  Zap,
+  Eye,
+  Key,
+  Lock,
+  BarChart3,
+  CheckCircle2,
+  DollarSign,
+  LineChart,
+  TrendingUp,
+  Users,
+} from "lucide-react";
 import NoiseTexture from "../Components/NoiseTexture";
 import Footer from "../Components/Footer";
 
 const PAMPage = () => {
-  const [activeTab, setActiveTab] = useState("benefits");
+  const [activeTab, setActiveTab] = useState("overview");
 
   const tabs = [
-    { id: "benefits", label: "Benefits", icon: CheckCircle2 },
-    { id: "capabilities", label: "Capabilities", icon: Settings },
-    { id: "how-it-works", label: "How it Works", icon: Eye },
-    { id: "use-cases", label: "Use Cases", icon: Users },
+    { id: "overview", label: "Overview", icon: Shield },
+    { id: "innovation", label: "Core Innovation", icon: Cpu },
+    { id: "capabilities", label: "Exclusive Capabilities", icon: Zap },
+    { id: "benefits1", label: "Risk Reduction", icon: Eye },
+    { id: "benefits2", label: "Compliance & Ops", icon: CheckCircle2 },
+    { id: "benefits3", label: "Cost & Advantage", icon: DollarSign },
   ];
 
   const content = {
-    benefits: {
-      title: "Key Benefits",
+    overview: {
+      title: "World’s First AI-Native PAM",
       items: [
         {
           icon: Shield,
-          text: "Enhanced Security Posture",
-          desc: "Protect privileged accounts from unauthorized access and cyber threats",
+          text: "The Future of Privileged Access Management",
+          desc: "SWOT PAM is the world’s first AI-native Privileged Access Management platform, purpose-built to address modern cyber threats. Our platform combines Vision Language Processing (VLP) and Offline LLM for proactive and predictive privileged security.",
+        },
+        {
+          icon: Cpu,
+          text: "AI-Powered Understanding & Security",
+          desc: "By merging context awareness with deep learning, SWOT PAM detects intent, behavior, and anomalies with unmatched precision while preserving full data privacy.",
         },
         {
           icon: Lock,
-          text: "Regulatory Compliance",
-          desc: "Meet SOC 2, HIPAA, PCI-DSS, and other compliance requirements",
+          text: "Transforming PAM Architecture",
+          desc: "This is not a legacy extension—it’s a redefinition of PAM. Experience a new era of automated, intelligent, and secure privileged access.",
+        },
+      ],
+    },
+    innovation: {
+      title: "Core Innovation: VLP + Offline LLM",
+      items: [
+        {
+          icon: Cpu,
+          text: "Vision Language Processing (VLP)",
+          desc: "A multimodal AI engine that understands text, visuals, and context together—detecting complex intent and emerging threats in real time.",
         },
         {
-          icon: CheckCircle2,
-          text: "Reduced Risk",
-          desc: "Minimize the risk of data breaches and insider threats",
+          icon: Lock,
+          text: "Offline Large Language Model (LLM)",
+          desc: "SWOT’s proprietary offline LLM ensures total data privacy by operating entirely within your infrastructure—no cloud dependencies, no external exposure.",
         },
         {
-          icon: Eye,
-          text: "Complete Visibility",
-          desc: "Full audit trail of all privileged access activities",
-        },
-        {
-          icon: Users,
-          text: "Improved Productivity",
-          desc: "Streamlined access workflows for IT teams",
-        },
-        {
-          icon: Settings,
-          text: "Automated Management",
-          desc: "Automatic password rotation and access revocation",
+          icon: Shield,
+          text: "Unprecedented Accuracy",
+          desc: "Understand user behavior and access intent with over 90% accuracy in real-time decision-making and automated approvals.",
         },
       ],
     },
     capabilities: {
-      title: "Core Capabilities",
+      title: "Exclusive SWOT PAM Capabilities",
       items: [
         {
-          icon: Shield,
-          text: "Password Vaulting",
-          desc: "Secure storage and management of privileged credentials",
+          icon: Eye,
+          text: "User Behavior Analytics (UBA)",
+          desc: "Detect anomalies instantly through AI-based behavioral baselines. Identify insider threats, compromised accounts, and misuse in real time.",
         },
         {
           icon: Lock,
-          text: "Just-in-Time Access",
-          desc: "Temporary elevation of privileges when needed",
+          text: "Conditional Access Policies",
+          desc: "Risk-based Zero Trust access—evaluating device health, behavior, and network context before granting privileges.",
         },
         {
-          icon: Eye,
-          text: "Session Recording",
-          desc: "Record and playback all privileged sessions",
+          icon: Key,
+          text: "Just-in-Time (JIT) Access",
+          desc: "Grant time-limited privileged access that automatically revokes after task completion, eliminating standing privileges.",
         },
         {
-          icon: Settings,
-          text: "Auto Password Rotation",
-          desc: "Automatic credential rotation and updates",
-        },
-        {
-          icon: Users,
-          text: "Multi-Factor Authentication",
-          desc: "Additional security layer for privileged access",
-        },
-        {
-          icon: CheckCircle2,
-          text: "Privileged Account Discovery",
-          desc: "Automatically find and onboard privileged accounts",
+          icon: Shield,
+          text: "Bring Your Own Key (BYOK)",
+          desc: "Total control over encryption keys and data residency. Ensure compliance with enterprise-grade privacy and security standards.",
         },
       ],
     },
-    "how-it-works": {
-      title: "How It Works",
+    benefits1: {
+      title: "Strategic Business Benefits – TIER 1: Risk Reduction & Breach Prevention",
       items: [
         {
-          icon: Settings,
-          text: "Step 1: Discovery",
-          desc: "PAM automatically discovers all privileged accounts across your infrastructure",
-        },
-        {
-          icon: Lock,
-          text: "Step 2: Vaulting",
-          desc: "Credentials are securely stored in an encrypted vault with rotation policies",
+          icon: Eye,
+          text: "Enhanced Cyber Resilience",
+          desc: "Detect and respond to threats in minutes instead of months, reducing breach impact by 95% and cutting MTTR from 206 days to under 15 minutes.",
         },
         {
           icon: Users,
-          text: "Step 3: Access Request",
-          desc: "Users request access through a secure workflow with approval processes",
-        },
-        {
-          icon: Eye,
-          text: "Step 4: Session Monitoring",
-          desc: "All privileged sessions are monitored and recorded in real-time",
+          text: "Insider Threat Prevention",
+          desc: "Behavior analytics identify insider risks before data loss, ensuring 100% session visibility and instant privilege revocation.",
         },
         {
           icon: Shield,
-          text: "Step 5: Audit & Compliance",
-          desc: "Comprehensive logs and reports for compliance and security audits",
-        },
-        {
-          icon: CheckCircle2,
-          text: "Step 6: Auto Revocation",
-          desc: "Access is automatically revoked after the approved time period",
+          text: "Reduced Attack Surface",
+          desc: "Zero standing privileges and continuous least-privilege enforcement reduce exposure to insider and external attacks by up to 70%.",
         },
       ],
     },
-    "use-cases": {
-      title: "Common Use Cases",
+    benefits2: {
+      title: "TIER 2: Compliance & Operational Efficiency",
       items: [
         {
-          icon: Shield,
-          text: "Financial Services",
-          desc: "Protect sensitive financial data and meet PCI-DSS compliance requirements",
+          icon: CheckCircle2,
+          text: "Automated Regulatory Compliance",
+          desc: "Meet NIST, HIPAA, GDPR, SOX, and PCI-DSS standards automatically with built-in governance and audit trails.",
+        },
+        {
+          icon: BarChart3,
+          text: "Operational Efficiency Gains",
+          desc: "AI automation reduces manual IT effort by up to 70%, saving weeks of administrative time and cutting operational errors by over half.",
         },
         {
           icon: Lock,
-          text: "Healthcare",
-          desc: "Secure patient records and comply with HIPAA regulations",
+          text: "Business Continuity & Resilience",
+          desc: "Ensure uninterrupted operations with real-time monitoring, automatic containment, and disaster recovery readiness.",
+        },
+      ],
+    },
+    benefits3: {
+      title: "TIER 3: Cost Savings & Strategic Advantage",
+      items: [
+        {
+          icon: DollarSign,
+          text: "Lower Total Cost of Ownership",
+          desc: "Achieve 70% lower TCO with rapid 2–4 week deployment and 6–12 month ROI—saving up to $950K over 3 years.",
         },
         {
-          icon: Users,
-          text: "Enterprise IT",
-          desc: "Manage admin access across complex multi-cloud environments",
+          icon: Shield,
+          text: "Reduced Cyber Insurance Premiums",
+          desc: "Enhanced resilience lowers risk ratings, reducing premiums by 20–30% and saving $50K–$200K annually.",
         },
         {
-          icon: Eye,
-          text: "Government",
-          desc: "Meet stringent security requirements for classified systems",
-        },
-        {
-          icon: Settings,
-          text: "Manufacturing",
-          desc: "Protect industrial control systems and intellectual property",
-        },
-        {
-          icon: CheckCircle2,
-          text: "Third-Party Access",
-          desc: "Secure vendor and contractor access to critical systems",
+          icon: TrendingUp,
+          text: "Competitive Advantage",
+          desc: "Accelerate operations by 80% with AI-native architecture, ensuring 95% user adoption and cloud-native scalability.",
         },
       ],
     },
@@ -168,24 +168,17 @@ const PAMPage = () => {
       }}
     >
       <NoiseTexture opacity={0.08} />
-
-      {/* Animated Background */}
       <motion.div
         animate={{
           background: [
-            "radial-gradient(circle at 20% 30%, rgba(129, 140, 248, 0.15) 0%, transparent 50%)",
-            "radial-gradient(circle at 80% 70%, rgba(192, 132, 252, 0.15) 0%, transparent 50%)",
-            "radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%)",
-            "radial-gradient(circle at 20% 30%, rgba(129, 140, 248, 0.15) 0%, transparent 50%)",
+            "radial-gradient(circle at 20% 30%, rgba(14,165,233,0.15) 0%, transparent 50%)",
+            "radial-gradient(circle at 80% 70%, rgba(6,182,212,0.15) 0%, transparent 50%)",
+            "radial-gradient(circle at 50% 50%, rgba(14,165,233,0.15) 0%, transparent 50%)",
+            "radial-gradient(circle at 20% 30%, rgba(14,165,233,0.15) 0%, transparent 50%)",
           ],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-        style={{
-          position: "absolute",
-          inset: 0,
-          pointerEvents: "none",
-          zIndex: 1,
-        }}
+        style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1 }}
       />
 
       <div style={{ position: "relative", zIndex: 2, paddingTop: "100px" }}>
@@ -205,8 +198,8 @@ const PAMPage = () => {
             style={{
               display: "inline-block",
               padding: "8px 20px",
-              background: "rgba(129, 140, 248, 0.15)",
-              border: "1px solid rgba(129, 140, 248, 0.3)",
+              background: "rgba(14,165,233,0.15)",
+              border: "1px solid rgba(6,182,212,0.3)",
               borderRadius: "50px",
               marginBottom: "20px",
             }}
@@ -215,12 +208,12 @@ const PAMPage = () => {
               style={{
                 fontSize: "14px",
                 fontWeight: "600",
-                background: "linear-gradient(135deg, #818cf8, #c084fc)",
+                background: "linear-gradient(135deg,#06b6d4,#0ea5e9)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Privileged Access Management
+              🚀 World’s First AI-Native PAM
             </span>
           </div>
 
@@ -228,32 +221,32 @@ const PAMPage = () => {
             style={{
               fontSize: "48px",
               fontWeight: "700",
-              background: "linear-gradient(135deg, #818cf8, #c084fc)",
+              background: "linear-gradient(135deg,#06b6d4,#0ea5e9)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               marginBottom: "16px",
               letterSpacing: "-1px",
             }}
           >
-            Secure Your Most Critical Assets
+            The Future of Privileged Access Management is Here
           </h1>
 
           <p
             style={{
               fontSize: "18px",
-              color: "rgba(255, 255, 255, 0.7)",
+              color: "rgba(255,255,255,0.7)",
               maxWidth: "800px",
               margin: "0 auto",
               lineHeight: "1.8",
             }}
           >
-            Comprehensive privileged access management solution to protect,
-            monitor, and control access to your organization's most sensitive
-            systems
+            Built from the ground up to redefine cybersecurity, SWOT PAM combines
+            Vision Language Processing (VLP) and Offline LLM for proactive,
+            intent-aware, and privacy-first privileged access management.
           </p>
         </motion.div>
 
-        {/* Main Content Grid */}
+        {/* Tabs Section (Right) + Video/Info (Left) */}
         <div
           style={{
             maxWidth: "1400px",
@@ -264,33 +257,30 @@ const PAMPage = () => {
             gap: "40px",
           }}
         >
-          {/* Left Column */}
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "30px" }}
-          >
-            {/* Video */}
+          {/* Left - Video + About */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "30px" }}>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
               style={{
                 position: "relative",
-                background: "rgba(10, 13, 20, 0.6)",
+                background: "rgba(10,13,20,0.6)",
                 backdropFilter: "blur(30px)",
-                border: "1px solid rgba(129, 140, 248, 0.2)",
+                border: "1px solid rgba(6,182,212,0.2)",
                 borderRadius: "20px",
                 overflow: "hidden",
                 aspectRatio: "16/9",
               }}
             >
               <video
-                src="/public/products-video.mp4" // ✅ FIXED PATH
+                src="/public/products-video.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
                 style={{
-                  position: "absolute", // ✅ Ensure video fills container
+                  position: "absolute",
                   top: 0,
                   left: 0,
                   width: "100%",
@@ -301,15 +291,14 @@ const PAMPage = () => {
               />
             </motion.div>
 
-            {/* Description */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
               style={{
-                background: "rgba(10, 13, 20, 0.6)",
+                background: "rgba(10,13,20,0.6)",
                 backdropFilter: "blur(30px)",
-                border: "1px solid rgba(129, 140, 248, 0.2)",
+                border: "1px solid rgba(6,182,212,0.2)",
                 borderRadius: "20px",
                 padding: "40px",
                 position: "relative",
@@ -322,52 +311,39 @@ const PAMPage = () => {
                   style={{
                     fontSize: "24px",
                     fontWeight: "700",
-                    color: "#818cf8",
+                    color: "#0ea5e9",
                     marginBottom: "20px",
                   }}
                 >
-                  About PAM
+                  About SWOT PAM
                 </h3>
                 <p
                   style={{
                     fontSize: "16px",
-                    color: "rgba(255, 255, 255, 0.8)",
+                    color: "rgba(255,255,255,0.8)",
                     lineHeight: "1.8",
                     marginBottom: "20px",
                   }}
                 >
-                  Privileged Access Management (PAM) is a critical security
-                  solution that helps organizations protect, control, and
-                  monitor access to their most sensitive systems and data. Our
-                  PAM solution provides comprehensive credential vaulting,
-                  session management, and compliance reporting.
-                </p>
-                <p
-                  style={{
-                    fontSize: "16px",
-                    color: "rgba(255, 255, 255, 0.8)",
-                    lineHeight: "1.8",
-                  }}
-                >
-                  With automated password rotation, just-in-time access, and
-                  complete session recording, you can ensure that privileged
-                  accounts are protected against both external threats and
-                  insider risks while maintaining full compliance with industry
-                  regulations.
+                  SWOT PAM empowers enterprises to stay ahead of evolving
+                  cyber threats with AI-driven privileged access intelligence.
+                  Designed for accuracy, automation, and autonomy, it brings
+                  together advanced analytics, behavior modeling, and offline
+                  LLM security.
                 </p>
               </div>
             </motion.div>
           </div>
 
-          {/* Right Column - Tabbed Box */}
+          {/* Right - Tabs */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
             style={{
-              background: "rgba(10, 13, 20, 0.6)",
+              background: "rgba(10,13,20,0.6)",
               backdropFilter: "blur(30px)",
-              border: "1px solid rgba(129, 140, 248, 0.2)",
+              border: "1px solid rgba(6,182,212,0.2)",
               borderRadius: "20px",
               overflow: "hidden",
               position: "relative",
@@ -379,9 +355,9 @@ const PAMPage = () => {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(4, 1fr)",
+                gridTemplateColumns: "repeat(3, 1fr)",
                 gap: "8px",
-                background: "rgba(129, 140, 248, 0.1)",
+                background: "rgba(6,182,212,0.1)",
                 padding: "12px",
                 position: "relative",
                 zIndex: 2,
@@ -398,11 +374,11 @@ const PAMPage = () => {
                       padding: "20px",
                       background:
                         activeTab === tab.id
-                          ? "linear-gradient(135deg, rgba(129, 140, 248, 0.2), rgba(192, 132, 252, 0.2))"
-                          : "rgba(10, 13, 20, 0.8)",
+                          ? "linear-gradient(135deg, rgba(6,182,212,0.2), rgba(14,165,233,0.2))"
+                          : "rgba(10,13,20,0.8)",
                       border:
                         activeTab === tab.id
-                          ? "1px solid rgba(129, 140, 248, 0.4)"
+                          ? "1px solid rgba(14,165,233,0.4)"
                           : "1px solid transparent",
                       borderRadius: "12px",
                       cursor: "pointer",
@@ -417,8 +393,8 @@ const PAMPage = () => {
                       size={24}
                       color={
                         activeTab === tab.id
-                          ? "#818cf8"
-                          : "rgba(255, 255, 255, 0.5)"
+                          ? "#0ea5e9"
+                          : "rgba(255,255,255,0.5)"
                       }
                     />
                     <span
@@ -427,8 +403,8 @@ const PAMPage = () => {
                         fontWeight: "600",
                         color:
                           activeTab === tab.id
-                            ? "#818cf8"
-                            : "rgba(255, 255, 255, 0.5)",
+                            ? "#0ea5e9"
+                            : "rgba(255,255,255,0.5)",
                       }}
                     >
                       {tab.label}
@@ -450,7 +426,7 @@ const PAMPage = () => {
                   style={{
                     fontSize: "28px",
                     fontWeight: "700",
-                    background: "linear-gradient(135deg, #818cf8, #c084fc)",
+                    background: "linear-gradient(135deg,#06b6d4,#0ea5e9)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     marginBottom: "30px",
@@ -459,12 +435,7 @@ const PAMPage = () => {
                   {content[activeTab].title}
                 </h3>
 
-                <div
-                  style={{
-                    display: "grid",
-                    gap: "20px",
-                  }}
-                >
+                <div style={{ display: "grid", gap: "20px" }}>
                   {content[activeTab].items.map((item, index) => {
                     const Icon = item.icon;
                     return (
@@ -477,14 +448,14 @@ const PAMPage = () => {
                           display: "flex",
                           gap: "16px",
                           padding: "20px",
-                          background: "rgba(129, 140, 248, 0.05)",
-                          border: "1px solid rgba(129, 140, 248, 0.1)",
+                          background: "rgba(6,182,212,0.05)",
+                          border: "1px solid rgba(6,182,212,0.1)",
                           borderRadius: "12px",
                         }}
                       >
                         <div
                           style={{
-                            background: "rgba(129, 140, 248, 0.2)",
+                            background: "rgba(6,182,212,0.2)",
                             borderRadius: "10px",
                             padding: "12px",
                             display: "flex",
@@ -494,14 +465,14 @@ const PAMPage = () => {
                             height: "44px",
                           }}
                         >
-                          <Icon size={20} color="#818cf8" />
+                          <Icon size={20} color="#0ea5e9" />
                         </div>
                         <div>
                           <h4
                             style={{
                               fontSize: "16px",
                               fontWeight: "600",
-                              color: "rgba(255, 255, 255, 0.9)",
+                              color: "rgba(255,255,255,0.9)",
                               marginBottom: "6px",
                             }}
                           >
@@ -510,7 +481,7 @@ const PAMPage = () => {
                           <p
                             style={{
                               fontSize: "14px",
-                              color: "rgba(255, 255, 255, 0.6)",
+                              color: "rgba(255,255,255,0.6)",
                               lineHeight: "1.6",
                             }}
                           >

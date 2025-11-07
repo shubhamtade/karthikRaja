@@ -130,6 +130,7 @@ const CTASection = () => {
             }}
           >
             <motion.button
+              onClick={() => window.openDemoModal && window.openDemoModal()}
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 40px rgba(236, 72, 153, 0.4)",
@@ -155,6 +156,7 @@ const CTASection = () => {
             </motion.button>
 
             <motion.button
+              onClick={() => window.openDemoModal && window.openDemoModal()}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               style={{

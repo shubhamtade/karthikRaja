@@ -167,9 +167,8 @@ const ContactUs = () => {
                     color: 'rgba(255, 255, 255, 0.7)',
                     lineHeight: '1.8'
                   }}>
-                    +91 - 810465653,<br />
-                    +91 - 7708455326,<br />
-                    +91 - 44 22380189
+                    +44 7438618490‬,<br />
+                    +91 9962233803
                   </div>
                 </div>
               </div>
@@ -235,10 +234,9 @@ const ContactUs = () => {
                     color: 'rgba(255, 255, 255, 0.7)',
                     lineHeight: '1.8'
                   }}>
-                    Rudratic Technologies LLP<br />
-                    548/22, GST Road, Kadaperi,<br />
-                    Tambaram, Chennai, Tamil Nadu<br />
-                    Pincode - 600045, India.
+                     Rudratic Technologies Ltd., 47, Courtside, 47-49 Penywern
+              road,London, SW59TU,<br />
+              India Address: No.187, 2nd cross street, shanthiNagar, chromepet, chennai, 600044
                   </div>
                 </div>
               </div>
@@ -275,6 +273,7 @@ const ContactUs = () => {
                   Schedule a free consultation with our experts to discuss your requirements.
                 </p>
                 <motion.button
+                  onClick={() => window.openDemoModal && window.openDemoModal()}
                   whileHover={{ scale: 1.05, boxShadow: '0 8px 30px rgba(255, 255, 255, 0.3)' }}
                   whileTap={{ scale: 0.98 }}
                   style={{

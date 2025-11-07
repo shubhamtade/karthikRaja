@@ -6,11 +6,12 @@ import { fadeInUp, staggerContainer } from "../utils/animations";
 import ParticleBackground from "./ParticleBackground";
 import { floatingAnimation } from "../utils/animations";
 
-const HeroSection = () => {
+const HeroSection = ({ setIsDemoModalOpen }) => {
   const [buttonHover, setButtonHover] = useState({
     primary: false,
     secondary: false,
   });
+  
 
   return (
     <section
@@ -170,6 +171,8 @@ const HeroSection = () => {
               }}
             >
               <motion.button
+
+                onClick={() => window.openDemoModal && window.openDemoModal()}
                 onMouseEnter={() =>
                   setButtonHover({ ...buttonHover, primary: true })
                 }
@@ -415,7 +418,7 @@ const HeroSection = () => {
                     objectFit: "cover",
                   }}
                   controls
-                  src="rutradic.mp4"
+                  src="/public/rutradic.mp4"
                 >
                   Your browser does not support the video tag.
                 </video>
@@ -443,7 +446,7 @@ const HeroSection = () => {
                       backdropFilter: "blur(40px)",
                       border: "1px solid rgba(255, 255, 255, 0.08)",
                       borderRadius: "16px",
-                      padding: "20px",
+                      padding: "0px",
                       height: "160px",
                       display: "flex",
                       alignItems: "center",
@@ -472,6 +475,7 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </div>
+     
     </section>
   );
 };

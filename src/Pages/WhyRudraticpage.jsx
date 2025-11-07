@@ -297,6 +297,7 @@ const WhyRudraticPage = () => {
           {/* CTA Button */}
           <div style={{ textAlign: 'center' }}>
             <motion.button
+              onClick={() => window.openDemoModal && window.openDemoModal()}
               whileHover={{ scale: 1.05, boxShadow: '0 15px 40px rgba(236, 72, 153, 0.4)' }}
               whileTap={{ scale: 0.98 }}
               style={{

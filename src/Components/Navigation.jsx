@@ -21,21 +21,29 @@ const Navigation = () => {
 
   const menuItems = [
     { label: "Home", href: "/", isRoute: true },
-    { label: "Products", href: "#products", hasDropdown: true },
-    { label: "Services", href: "#services", hasDropdown: true },
-    { label: "Company", href: "#company", hasDropdown: true },
+    { label: "Products", href: "#products", hasDropdown: true, isRoute: true  },
+    { label: "Services", href: "#services", hasDropdown: true, isRoute: true  },
+    { label: "Company", href: "#company", hasDropdown: true, isRoute: true  },
     { label: "Contact", href: "/contact", isRoute: true },
   ];
 
   // Determine active menu item based on current route
-  const getActiveIndex = () => {
-    if (location.pathname === "/contact") {
-      return 4; // Contact index
-    } else if (location.pathname === "/") {
-      return 0; // Home index
-    }
-    return 0; // Default to Home
-  };
+ const getActiveIndex = () => {
+  const path = location.pathname;
+  
+  if (path === "/contact") {
+    return 4; // Contact index
+  } else if (path.startsWith("/products")) {
+    return 1; // Products index
+  } else if (path.startsWith("/services")) {
+    return 2; // Services index
+  } else if (path.startsWith("/company") || path === "/solutions" || path === "/about-us" || path === "/client-success" || path === "/why-rudratic") {
+    return 3; // Services index  
+  } else if (path === "/") {
+    return 0; // Home index
+  }
+  return 0; // Default to Home
+};
 
   const activeIndex = getActiveIndex();
 
@@ -43,31 +51,38 @@ const Navigation = () => {
   // Products Dropdown Content
   const productsContent = [
     {
-      title: "Privileged Access Management",
-      subtitle: "Secure Critical Assets",
+      title: "SWOT Analysis",
+      subtitle: "Privileged Access Management",
       color: "#ec4899",
       href: "/products/pam",
       isRoute: true,
     },
     {
-      title: "IT Monitoring",
-      subtitle: "Infrastructure Visibility",
-      color: "#8b5cf6",
-      href: "/products/monitoring",
-      isRoute: true,
-    },
-    {
-      title: "Business Process Management",
-      subtitle: "Workflow Automation",
+      title: "SWOTDAM",
+      subtitle: "Digital Asset Management",
       color: "#ec4899",
-      href: "/products/bpm",
+      href: "/products/SWOTDAMPage",
       isRoute: true,
     },
     {
-      title: "IT Automation",
-      subtitle: "Intelligent Orchestration",
+      title: "SWOTCloudPAM",
+      subtitle: "Cloud Privileged Access Management",
       color: "#8b5cf6",
-      href: "/products/automation",
+      href: "/products/SWOTCloudPAMPage",
+      isRoute: true,
+    },
+    {
+      title: "AIquinox",
+      subtitle: "Performance Monitoring Platform",
+      color: "#8b5cf6",
+      href: "/products/AiquinoxPage",
+      isRoute: true,
+    },
+    {
+      title: "BPMAutomation",
+      subtitle: "Business Process Management",
+      color: "#8b5cf6",
+      href: "/products/BPMAutomationPage",
       isRoute: true,
     },
   ];
@@ -75,34 +90,46 @@ const Navigation = () => {
   // Services Dropdown Content
   const servicesContent = [
     {
-      title: "Application development",
-      subtitle: ".NET, Java, Mobile Applications",
+      title: "Application Development",
+      subtitle: "Custom Solutions",
       color: "#ec4899",
+      href: "/services/app-development",
+      isRoute: true,
     },
     {
       title: "Oracle Services",
-      subtitle: "Training, Consulting, Implementation",
+      subtitle: "Enterprise Solutions",
       color: "#8b5cf6",
+      href: "/services/oracle",
+      isRoute: true,
     },
     {
       title: "SAP Consulting",
-      subtitle: "Enterprise Solutions",
+      subtitle: "Business Integration",
       color: "#ec4899",
+      href: "/services/sap",
+      isRoute: true,
     },
     {
       title: "IBM Services",
-      subtitle: "Training, Consulting, Implementation",
-      color: "#8b5cf6",
-    },
-    {
-      title: "IT Infrastructure Support",
       subtitle: "Infrastructure Management",
-      color: "#ec4899",
+      color: "#8b5cf6",
+      href: "/services/ibm",
+      isRoute: true,
     },
     {
-      title: "VMware & Virtualization",
-      subtitle: "Infrastructure Solutions",
+      title: "IT Infrastructure",
+      subtitle: "Network & Systems",
+      color: "#ec4899",
+      href: "/services/it-infrastructure",
+      isRoute: true,
+    },
+    {
+      title: "VMware Solutions",
+      subtitle: "Virtualization",
       color: "#8b5cf6",
+      href: "/services/vmware",
+      isRoute: true,
     },
   ];
 
@@ -158,7 +185,8 @@ const Navigation = () => {
         style={{
           position: "fixed",
           top: scrolled ? "20px" : "30px",
-          left: "10%",
+          left: "4%",
+          alignItems: "center",
           transform: "translateX(-50%)",
           zIndex: 1000,
           width: "calc(100% - 100px)",
@@ -215,12 +243,12 @@ const Navigation = () => {
               }}
             >
               <motion.img
-                src="/Rudratic-logoo copy.png"
+                src="/rudratic new logo.png"
                 alt="RUDRATIC Logo"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
                 style={{
-                  height: "42px",
+                  height: "56px",
                   width: "auto",
                   objectFit: "contain",
                 }}
@@ -635,23 +663,32 @@ const Navigation = () => {
                                 </div>
                                 <div
                                   style={{
-                                    fontSize: "13px",
+                                    fontSize: "12px",
                                     color: "rgba(255, 255, 255, 0.75)",
                                     lineHeight: "1.8",
                                     letterSpacing: "0.2px",
+                                    textAlign: "justify",
                                   }}
                                 >
-                                  Empower your business with Rudratic
-                                  Technologies' curated suite of integrated IT
-                                  solutions. We deliver cutting-edge products
-                                  for Identity & Access Management, IT &
-                                  Business Process Automation, and advanced
-                                  Monitoring.
+                                  Transform your business with our integrated
+                                  suite of enterprise solutions. From managing
+                                  digital assets with SWOT DAM and securing
+                                  cloud access through SWOT CLOUD PAM, to
+                                  automating workflows with BPM AUTOMATION and
+                                  analyzing privileged access with SWOT PAM
+                                  Analysis, we've got you covered. AIquinox ties
+                                  it all together with AI-driven performance
+                                  monitoring, giving you complete visibility and
+                                  control. Our solutions work seamlessly to
+                                  protect your infrastructure, streamline
+                                  operations, and drive intelligent
+                                  decision-making across your organization.
                                 </div>
                               </div>
 
                               {/* Request Demo Button at Bottom */}
                               <motion.button
+                                onClick={() => window.openDemoModal && window.openDemoModal()}
                                 whileHover={{
                                   scale: 1.03,
                                   boxShadow:
@@ -705,42 +742,48 @@ const Navigation = () => {
                                 height: "100%",
                               }}
                             >
-                              {servicesContent.map((service, idx) => (
-                                <motion.div
+                              {servicesContent.map((product, idx) => (
+                                <Link
                                   key={idx}
-                                  whileHover={{ scale: 1.03, y: -2 }}
-                                  style={{
-                                    background: `linear-gradient(135deg, ${service.color}15, transparent)`,
-                                    border: `1px solid ${service.color}35`,
-                                    borderRadius: "14px",
-                                    padding: "20px",
-                                    cursor: "pointer",
-                                    transition: "all 0.3s ease",
-                                    height: "fit-content",
-                                  }}
+                                  to={product.href}
+                                  style={{ textDecoration: "none" }}
+                                  onClick={() => setActiveDropdown(null)}
                                 >
-                                  <div
+                                  <motion.div
+                                    whileHover={{ scale: 1.03, y: -2 }}
                                     style={{
-                                      fontSize: "14px",
-                                      fontWeight: "600",
-                                      color: service.color,
-                                      marginBottom: "8px",
-                                      lineHeight: "1.4",
+                                      background: `linear-gradient(135deg, ${product.color}15, transparent)`,
+                                      border: `1px solid ${product.color}35`,
+                                      borderRadius: "14px",
+                                      padding: "20px",
+                                      cursor: "pointer",
+                                      transition: "all 0.3s ease",
+                                      height: "fit-content",
                                     }}
                                   >
-                                    {service.title}
-                                  </div>
-                                  <div
-                                    style={{
-                                      fontSize: "12px",
-                                      color: "rgba(255, 255, 255, 0.65)",
-                                      fontWeight: "400",
-                                      lineHeight: "1.5",
-                                    }}
-                                  >
-                                    {service.subtitle}
-                                  </div>
-                                </motion.div>
+                                    <div
+                                      style={{
+                                        fontSize: "14px",
+                                        fontWeight: "600",
+                                        color: product.color,
+                                        marginBottom: "8px",
+                                        lineHeight: "1.4",
+                                      }}
+                                    >
+                                      {product.title}
+                                    </div>
+                                    <div
+                                      style={{
+                                        fontSize: "12px",
+                                        color: "rgba(255, 255, 255, 0.65)",
+                                        fontWeight: "400",
+                                        lineHeight: "1.5",
+                                      }}
+                                    >
+                                      {product.subtitle}
+                                    </div>
+                                  </motion.div>
+                                </Link>
                               ))}
                             </div>
 
@@ -839,17 +882,22 @@ const Navigation = () => {
                                     color: "rgba(255, 255, 255, 0.75)",
                                     lineHeight: "1.8",
                                     letterSpacing: "0.2px",
+                                    textAlign: "justify",
                                   }}
                                 >
-                                  From application development to enterprise
-                                  solutions, infrastructure support, and cloud
-                                  virtualization, we provide end-to-end services
-                                  tailored to your needs.
+                                  From enterprise platforms to custom development, we deliver end-to-end IT
+                                  solutions tailored to your needs. Whether it's Oracle and IBM training and implementation,
+                                  VMware virtualization, round-the-clock Infrastructure Support, cutting-edge
+                                  Application Development in .NET, Java, and mobile, or SAP Consulting, our expert team
+                                  provides the knowledge, tools, and support to transform your technology landscape. We
+                                  partner with you every step of the way to ensure successful implementation and
+                                  ongoing optimization of your IT investments.
                                 </div>
                               </div>
 
                               {/* Request Demo Button at Bottom */}
                               <motion.button
+                                onClick={() => window.openDemoModal && window.openDemoModal()}
                                 whileHover={{
                                   scale: 1.03,
                                   boxShadow:

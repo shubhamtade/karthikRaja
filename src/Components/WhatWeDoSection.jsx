@@ -144,6 +144,7 @@ const WhatWeDoSection = () => {
             </motion.div>
 
             <motion.button
+              onClick={() => window.openDemoModal && window.openDemoModal()}
               variants={fadeInUp}
               whileHover={{ scale: 1.02, x: 5 }}
               style={{
@@ -197,7 +198,7 @@ const WhatWeDoSection = () => {
                 >
                   <div
                     style={{
-                      padding: "8px",
+                      padding: "0px",
                       borderRadius: "12px",
                       background: `${feature.color}20`,
                       transition: "transform 0.3s ease",
